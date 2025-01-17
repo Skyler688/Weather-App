@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>News</li>
+        <li>Weather</li>
+        <li style="float: right">About</li>
+      </ul>
+    </nav>
+    <main></main>
+
+    <section class="weather-section">
+      <div class="page">
+        <h1>LATEST WEATHER</h1>
+        <div class="archive">
+          <article class="article">
+            <section id="stats">
+              <div class="summary">
+                <h2>Weather summary</h2>
+                <h3 id="five-city">Honolulu</h3>
+                <p>Currently: <span id="current-desc">Sunny</span></p>
+                <p>
+                  Tempature:
+                  <span id="current-temp">84</span> °F
+                </p>
+                <p>Wind Chill: <span id="current-windChill">80</span> °F</p>
+                <p>Humidity: <span id="current-humid">92</span>%</p>
+                <p>Wind Speed: <span id="current-windSpeed">10</span> mph</p>
+              </div>
+            </section>
+            <div>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa98qCX7Kl2geP73d0TJE4-f-TyfaD-mlxxQ&s"
+                alt="Weather Image"
+              />
+            </div>
+          </article>
+
+          <!-- 5 day forecast -->
+          <div class="article-five-day">
+            <article id="forecastContainer">
+              <h2 id="forecastTitle">5 Day Forecast</h2>
+              <h3 id="city"></h3>
+              <div class="flex">
+                <div class="flex-col">
+                  <span id="dayTitle1" class="col-head">Day 1</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+                    alt="Sunny image"
+                    id="data1"
+                    class="weatherIcon"
+                  />
+                  <div class="temp-data">
+                    <span id="data1">84</span>
+                    <span>°F</span>
+                  </div>
+                </div>
+                <div class="flex-col">
+                  <span id="dayTitle2" class="col-head">Day 2</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+                    alt="Sunny image"
+                    id="weatherIcon2"
+                    class="weatherIcon"
+                  />
+                  <div class="temp-data">
+                    <span id="data2">88</span>
+                    <span>°F</span>
+                  </div>
+                </div>
+                <div class="flex-col">
+                  <span id="dayTitle3" class="col-head">Day 3</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/4814/4814489.png"
+                    alt="Cloudy image"
+                    id="weatherIcon3"
+                    class="weatherIcon"
+                  />
+                  <div class="temp-data">
+                    <span id="data3">76</span>
+                    <span>°F</span>
+                  </div>
+                </div>
+                <div class="flex-col">
+                  <span id="dayTitle4" class="col-head">Day 4</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/3075/3075858.png"
+                    alt="Light rain image"
+                    id="weatherIcon4"
+                    class="weatherIcon"
+                  />
+                  <div class="temp-data">
+                    <span id="data4">72</span>
+                    <span>°F</span>
+                  </div>
+                </div>
+                <div class="flex-col">
+                  <span id="dayTitle5" class="col-head">Day 5</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/4088/4088981.png"
+                    alt="Heavy rain image"
+                    id="weatherIcon5"
+                    class="weatherIcon"
+                  />
+                  <div class="temp-data">
+                    <span id="data5">70</span>
+                    <span>°F</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <footer></footer>
+  </body>
+</html>
