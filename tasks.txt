@@ -1,0 +1,8 @@
+requirments:
+    Style both the Weather and News Section of the site using the CSS knowledge you have gained up to this point.
+    Create a new GitHub branch for this project to have this be your next version of the project. 
+    Using the images above as examples create the look and feel of your site.
+    Create either GitHub Pages or a Glitch page for the project.
+
+
+

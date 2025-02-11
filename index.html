@@ -1,183 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <header></header>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>News</li>
-        <li>Weather</li>
-        <li style="float: right">About</li>
-      </ul>
-    </nav>
-    <main></main>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#weather">Weather</a></li>
+          <li class="about">About</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="weather-section" id="weather">
+        <div class="page">
+          <div class="banner">
+            <img src="img/weather-banner.jpg" alt="Cloudy mountain top" />
+            <h1>LATEST WEATHER</h1>
+          </div>
+          <div class="archive">
+            <article class="article">
+              <section id="stats">
+                <h2 class="section-header">Weather summary</h2>
+                <div class="summary">
+                  <h3 id="five-city"><span>Salt Lake City</span></h3>
+                  <div class="info">
+                    <p>Currently:</p>
+                    <p class="right" id="current-desc">Sunny</p>
+                    <p>Tempature:</p>
+                    <p class="right" id="current-temp">84<span> °F</span></p>
+                    <p>Wind Chill:</p>
+                    <p class="right" id="current-windChill">
+                      80<span> °F</span>
+                    </p>
+                    <p>Humidity:</p>
+                    <p class="right" id="current-humid">15<span> %</span></p>
+                    <p>Wind Speed:</p>
+                    <p class="right" id="current-windSpeed">
+                      10<span> mph</span>
+                    </p>
+                  </div>
+                  <div class="spacer"></div>
+                </div>
+              </section>
+            </article>
 
-    <section class="weather-section">
-      <div class="page">
-        <h1>LATEST WEATHER</h1>
-        <div class="archive">
-          <article class="article">
-            <section id="stats">
-              <div class="summary">
-                <h2>Weather summary</h2>
-                <h3 id="five-city">Honolulu</h3>
-                <p>Currently: <span id="current-desc">Sunny</span></p>
-                <p>
-                  Tempature:
-                  <span id="current-temp">84</span> °F
-                </p>
-                <p>Wind Chill: <span id="current-windChill">80</span> °F</p>
-                <p>Humidity: <span id="current-humid">92</span>%</p>
-                <p>Wind Speed: <span id="current-windSpeed">10</span> mph</p>
-              </div>
-            </section>
-            <div>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa98qCX7Kl2geP73d0TJE4-f-TyfaD-mlxxQ&s"
-                alt="Weather Image"
-              />
+            <!-- 5 day forecast -->
+            <div class="article-five-day">
+              <article class="forecast" id="forecastContainer">
+                <h3 id="forecastTitle"><span>5 Day Forecast</span></h3>
+                <h3 id="city"></h3>
+                <div class="spacer"></div>
+                <div class="flex">
+                  <div class="flex-col">
+                    <span id="dayTitle1" class="col-head">Day 1:</span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+                      alt="Sunny image"
+                      id="data1"
+                      class="weatherIcon"
+                    />
+                    <div class="temp-data">
+                      <span id="data1">84</span>
+                      <span class="degres">°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle2" class="col-head">Day 2:</span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+                      alt="Sunny image"
+                      id="weatherIcon2"
+                      class="weatherIcon"
+                    />
+                    <div class="temp-data">
+                      <span id="data2">86</span>
+                      <span class="degres">°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle3" class="col-head">Day 3:</span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/4814/4814489.png"
+                      alt="Cloudy image"
+                      id="weatherIcon3"
+                      class="weatherIcon"
+                    />
+                    <div class="temp-data">
+                      <span id="data3">76</span>
+                      <span class="degres">°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle4" class="col-head">Day 4:</span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/3075/3075858.png"
+                      alt="Light rain image"
+                      id="weatherIcon4"
+                      class="weatherIcon"
+                    />
+                    <div class="temp-data">
+                      <span id="data4">72</span>
+                      <spa class="degres">°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle5" class="col-head">Day 5:</span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/4088/4088981.png"
+                      alt="Heavy rain image"
+                      id="weatherIcon5"
+                      class="weatherIcon"
+                    />
+                    <div class="temp-data">
+                      <span id="data5">70</span>
+                      <span class="degres">°F</span>
+                    </div>
+                  </div>
+                  <div class="spacer"></div>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
+        </div>
+      </section>
+      <!-- <hr /> -->
 
-          <!-- 5 day forecast -->
-          <div class="article-five-day">
-            <article id="forecastContainer">
-              <h2 id="forecastTitle">5 Day Forecast</h2>
-              <h3 id="city"></h3>
-              <div class="flex">
-                <div class="flex-col">
-                  <span id="dayTitle1" class="col-head">Day 1</span>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
-                    alt="Sunny image"
-                    id="data1"
-                    class="weatherIcon"
-                  />
-                  <div class="temp-data">
-                    <span id="data1">84</span>
-                    <span>°F</span>
-                  </div>
-                </div>
-                <div class="flex-col">
-                  <span id="dayTitle2" class="col-head">Day 2</span>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
-                    alt="Sunny image"
-                    id="weatherIcon2"
-                    class="weatherIcon"
-                  />
-                  <div class="temp-data">
-                    <span id="data2">88</span>
-                    <span>°F</span>
-                  </div>
-                </div>
-                <div class="flex-col">
-                  <span id="dayTitle3" class="col-head">Day 3</span>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/4814/4814489.png"
-                    alt="Cloudy image"
-                    id="weatherIcon3"
-                    class="weatherIcon"
-                  />
-                  <div class="temp-data">
-                    <span id="data3">76</span>
-                    <span>°F</span>
-                  </div>
-                </div>
-                <div class="flex-col">
-                  <span id="dayTitle4" class="col-head">Day 4</span>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/3075/3075858.png"
-                    alt="Light rain image"
-                    id="weatherIcon4"
-                    class="weatherIcon"
-                  />
-                  <div class="temp-data">
-                    <span id="data4">72</span>
-                    <span>°F</span>
-                  </div>
-                </div>
-                <div class="flex-col">
-                  <span id="dayTitle5" class="col-head">Day 5</span>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/128/4088/4088981.png"
-                    alt="Heavy rain image"
-                    id="weatherIcon5"
-                    class="weatherIcon"
-                  />
-                  <div class="temp-data">
-                    <span id="data5">70</span>
-                    <span>°F</span>
-                  </div>
-                </div>
-              </div>
+      <section class="news-section" id="news">
+        <div class="page">
+          <div class="banner-2">
+            <img src="img/news-banner.jpeg" alt="mountain forest image" />
+            <h2>Latest News</h2>
+          </div>
+          <h3 class="section-header">Articles</h3>
+          <div class="spacer"></div>
+          <div class="archive-2">
+            <article class="article">
+              <h3>
+                <a id="header-article">Main Article Title</a>
+              </h3>
+              <img src="img/main-article.jpeg" alt="main article" />
+              <!--id="header-img"-->
+              <p id="header-desc">
+                Main Article Description: Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Aliquam eius magnam voluptates
+                voluptatibus ut nisi asperiores dolor fuga consequuntur in.
+                Aperiam velit ut eius dolores error laudantium praesentium harum
+                vero?
+              </p>
+            </article>
+            <article class="article">
+              <h3>
+                <a id="article-link-1">No Article Title</a>
+              </h3>
+              <img
+                id="article-img-1"
+                src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
+                alt="main article"
+              />
+              <p id="article-desc-1">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+                repudiandae facilis saepe dicta nesciunt, rem quidem eum ad
+                tenetur inventore, debitis ut tempora. Cumque, iure quia?
+                Corrupti odit et accusantium.
+              </p>
+              <h3>
+                <a id="article-link-2">No Article Title</a>
+              </h3>
+              <img
+                id="article-img-2"
+                src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
+                alt="article 1"
+              />
+              <p id="article-desc-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dignissimos rem quod harum cum veniam? Harum nostrum ut labore
+                officiis aliquid, voluptatibus nihil libero culpa eum ab optio
+                veritatis voluptates animi!
+              </p>
+              <h3>
+                <a id="article-link-3">No Article Title</a>
+              </h3>
+              <img
+                id="article-img-3"
+                src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
+                alt="article 3"
+              />
+              <p id="article-desc-3">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni,
+                et nihil voluptatibus nemo officiis cupiditate doloribus
+                praesentium unde. Debitis voluptatum, libero necessitatibus ad
+                est quasi in harum! Tempora, consequatur error?
+              </p>
             </article>
           </div>
         </div>
-      </div>
-    </section>
-    <hr />
-
-    <section class="news-section">
-      <div class="page">
-        <h1>LATEST NEWS</h1>
-        <div class="archive">
-          <article class="article">
-            <img id="header-img" alt="main article" />
-            <h2>
-              <a id="header-article"></a>
-            </h2>
-            <p id="header-desc">No Article Description.</p>
-          </article>
-          <article class="article">
-            <img
-              id="article-img-1"
-              src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-              alt="main article"
-            />
-            <h3>
-              <a id="article-link-1">No Article Title</a>
-            </h3>
-            <p id="article-desc-1">No Article Description.</p>
-            <img
-              id="article-img-2"
-              src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-              alt="article 1"
-            />
-            <h3>
-              <a id="article-link-2">No Article Title</a>
-            </h3>
-            <p id="article-desc-2">No Article Description.</p>
-            <img
-              id="article-img-2"
-              src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-              alt="article 2"
-            />
-            <h3>
-              <a id="article-link-3">No Article Title</a>
-            </h3>
-            <p id="article-desc-3">No Article Description.</p>
-            <img
-              id="article-img-3"
-              src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2"
-              alt="article 3"
-            />
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <p>
         © 2025 | Skyler Clark |
         <a href="https://tooeletech.edu"> Tooele Technical Collage </a>
       </p>
-      <p>last updated: Fri Jan 17 2025</p>
+      <p>Last Updated: Fri Jan 17 2025</p>
     </footer>
   </body>
 </html>

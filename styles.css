@@ -1,0 +1,233 @@
+/* PAGE STARTING SIZE 350px */
+
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  background-color: #e9e8d5;
+}
+
+/* Multi use styles */
+body .section-header {
+  font-size: 24px;
+  padding-left: 8%;
+  background-color: #62636e;
+  padding-block: 5px;
+  color: #f2cfa1;
+  text-shadow: 1px 1px black;
+  position: relative;
+  top: -4px;
+  border-block: 1px solid #000000;
+  font-family: Garamond, serif;
+}
+body .spacer {
+  padding-block: 15px;
+}
+/* Header */
+nav,
+ul,
+li,
+header a {
+  background-color: #62636e;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  border-block: 1px solid #000000;
+}
+header ul {
+  padding-block: 8px;
+}
+nav li,
+nav a {
+  font-family: Tahoma, sans-serif;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+nav li {
+  background-color: #d7b68b;
+  padding-inline: 8px;
+  padding-block: 2px;
+  border-radius: 12px;
+  color: black;
+  outline: 1px solid black;
+}
+nav li a {
+  background-color: #d7b68b;
+  text-decoration: none;
+  color: black;
+}
+
+/* Weather summary */
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 1000px;
+  aspect-ratio: 1/ 0.4;
+  object-fit: cover;
+  object-position: top;
+}
+.banner h1 {
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  background-color: #00000000;
+  font-size: 18px;
+}
+.summary h3 {
+  margin-left: 10%;
+  margin-block: 15px;
+}
+.summary h3 span {
+  font-size: 23px;
+  padding-block: 3px;
+  padding-inline: 10px;
+  background-color: #f2cfa1;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+.summary .info {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+.summary .info img {
+  width: 24px;
+  background-color: #62636e;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.summary .info p {
+  margin-block: 5px;
+  font-size: 18px;
+  text-align: right;
+  margin-right: 0;
+}
+.summary .info .right {
+  margin-left: 10px;
+  text-align: left;
+  font-size: 24px;
+}
+.summary .info .right span {
+  font-size: 12px;
+}
+
+/* 5 Day Forecast */
+.forecast h3 {
+  margin-left: 10%;
+  margin-block: 15px;
+}
+.forecast h3 span {
+  font-size: 23px;
+  padding-block: 3px;
+  padding-inline: 10px;
+  background-color: #f2cfa1;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.flex-col img {
+  width: 24px;
+  background-color: #62636e;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.col-head {
+  align-self: flex-start;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-left: 30px;
+  white-space: nowrap;
+}
+.temp-data {
+  margin-left: 10px;
+  font-size: 24px;
+  white-space: nowrap;
+}
+.temp-data .degres {
+  font-size: 12px;
+}
+
+/* Latest News */
+.banner-2 {
+  position: relative;
+  border-top: 1px solid black;
+}
+.banner-2 img {
+  width: 1000px;
+  aspect-ratio: 1 / 0.4;
+  object-fit: cover;
+  object-position: top;
+}
+.banner-2 h2 {
+  position: absolute;
+  text-align: center; /* note must add width to text to make center work with absolute position  */
+  width: 100%;
+  top: 18%;
+  font-size: 28px;
+  background-color: #00000000;
+}
+.archive-2 .article h3 {
+  margin-left: 10%;
+  white-space: nowrap;
+  margin-block: 12px;
+}
+.article h3 a {
+  padding-block: 3px;
+  padding-inline: 10px;
+  background-color: #f2cfa1;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+.article img {
+  width: 65%;
+  height: auto;
+  margin-left: 23%;
+  border-radius: 12px;
+  outline: 1px solid black;
+}
+.article p {
+  margin-inline: 15%;
+  margin-bottom: 35px;
+  font-size: 17px;
+}
+
+/* Footer */
+footer {
+  background-color: #62636e;
+  padding-block: 5px;
+  border-block: 1px solid black;
+}
+footer p,
+footer a {
+  text-align: center;
+  background-color: #62636e;
+  padding-block: 3px;
+}
+footer a {
+  color: #f2cfa1;
+}
+
+/* navigation offsets */
+#weather,
+#news {
+  scroll-margin-top: 38px;
+}
