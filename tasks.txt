@@ -6,3 +6,7 @@ requirments:
 
 
 
+next to do:
+    reactive desine.
+        add header resizing to match the size of .section-header.
+    experement with color scheame.

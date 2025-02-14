@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
   </head>
   <body>
     <header>
@@ -24,10 +24,11 @@
             <img src="img/weather-banner.jpg" alt="Cloudy mountain top" />
             <h1>LATEST WEATHER</h1>
           </div>
+          <h2 class="section-header">Weather summary</h2>
+          <div class="spacer"></div>
           <div class="archive">
             <article class="article">
               <section id="stats">
-                <h2 class="section-header">Weather summary</h2>
                 <div class="summary">
                   <h3 id="five-city"><span>Salt Lake City</span></h3>
                   <div class="info">
@@ -56,7 +57,6 @@
               <article class="forecast" id="forecastContainer">
                 <h3 id="forecastTitle"><span>5 Day Forecast</span></h3>
                 <h3 id="city"></h3>
-                <div class="spacer"></div>
                 <div class="flex">
                   <div class="flex-col">
                     <span id="dayTitle1" class="col-head">Day 1:</span>
@@ -141,7 +141,7 @@
           <h3 class="section-header">Articles</h3>
           <div class="spacer"></div>
           <div class="archive-2">
-            <article class="article">
+            <article class="article" id="main-article">
               <h3>
                 <a id="header-article">Main Article Title</a>
               </h3>
@@ -155,7 +155,7 @@
                 vero?
               </p>
             </article>
-            <article class="article">
+            <article class="article" id="article-1">
               <h3>
                 <a id="article-link-1">No Article Title</a>
               </h3>
@@ -170,6 +170,8 @@
                 tenetur inventore, debitis ut tempora. Cumque, iure quia?
                 Corrupti odit et accusantium.
               </p>
+             </article>
+             <article class="article" id="article-2">
               <h3>
                 <a id="article-link-2">No Article Title</a>
               </h3>
@@ -184,6 +186,8 @@
                 officiis aliquid, voluptatibus nihil libero culpa eum ab optio
                 veritatis voluptates animi!
               </p>
+             </article> 
+             <article class="article" id="article-3">
               <h3>
                 <a id="article-link-3">No Article Title</a>
               </h3>
