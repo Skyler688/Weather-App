@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
   <body>
@@ -30,22 +30,18 @@
             <article class="article">
               <section id="stats">
                 <div class="summary">
-                  <h3 id="five-city"><span>Salt Lake City</span></h3>
+                  <h3 id="city"></h3>
                   <div class="info">
                     <p>Currently:</p>
-                    <p class="right" id="current-desc">Sunny</p>
-                    <p>Tempature:</p>
-                    <p class="right" id="current-temp">84<span> °F</span></p>
+                    <p class="right" id="current-desc"></p>
+                    <p>Temperature:</p>
+                    <p class="right" id="current-temp"></p>
                     <p>Wind Chill:</p>
-                    <p class="right" id="current-windChill">
-                      80<span> °F</span>
-                    </p>
+                    <p class="right" id="current-windChill"></p>
                     <p>Humidity:</p>
-                    <p class="right" id="current-humid">15<span> %</span></p>
+                    <p class="right" id="current-humid"></p>
                     <p>Wind Speed:</p>
-                    <p class="right" id="current-windSpeed">
-                      10<span> mph</span>
-                    </p>
+                    <p class="right" id="current-windSpeed"></p>
                   </div>
                   <div class="spacer"></div>
                 </div>
@@ -56,7 +52,7 @@
             <div class="article-five-day">
               <article class="forecast" id="forecastContainer">
                 <h3 id="forecastTitle"><span>5 Day Forecast</span></h3>
-                <h3 id="city"></h3>
+                <h3 id="five-city"></h3>
                 <div class="flex">
                   <div class="flex-col">
                     <span id="dayTitle1" class="col-head">Day 1:</span>
@@ -215,5 +211,7 @@
       </p>
       <p>Last Updated: Fri Jan 17 2025</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
