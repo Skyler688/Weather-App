@@ -184,18 +184,20 @@ nav li a {
 }
 .archive-2 .article h3 {
   margin-left: 10%;
-  white-space: nowrap;
-  margin-block: 12px;
-}
-.article h3 a {
   padding-block: 3px;
   padding-inline: 10px;
+  /* white-space: nowrap; */
+  margin-block: 12px;
+  width: 70%;
   background-color: #f2cfa1;
-  color: #000000;
-  font-size: 20px;
   border-radius: 10px;
   outline: 1px solid black;
   box-shadow: 2px 2px 4px black;
+}
+.article h3 a {
+  background-color: #f2cfa1;
+  color: #000000;
+  font-size: 20px;
 }
 .article img {
   width: 65%;

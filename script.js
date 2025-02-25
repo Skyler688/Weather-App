@@ -18,10 +18,17 @@ const forecastImg = [
   document.getElementById("weatherIcon4"),
   document.getElementById("weatherIcon5"),
 ];
+const articleTitles = [
+  document.getElementById("header-article"),
+  document.getElementById("article-link-1"),
+  document.getElementById("article-link-2"),
+  document.getElementById("article-link-3"),
+];
 
-const apiKey = "856ff3b913c4ebc84e7e9012d881adf7";
+const weatherApiKey = "856ff3b913c4ebc84e7e9012d881adf7";
+const newsApiKey = "c2a544f7e8ff40e2ae10e4f8b2859f23";
 
-const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=tooele&&units=imperial&appid=${apiKey}`;
+const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=tooele&&units=imperial&appid=${weatherApiKey}`;
 
 fetch(weatherApi)
   .then((response) => response.json())
@@ -36,7 +43,7 @@ function fiveDayForcastApi(weatherData) {
   const lat = weatherData.coord.lat;
   const lon = weatherData.coord.lon;
   const days = "5";
-  const forecastApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  const forecastApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=imperial`;
   fetch(forecastApi)
     .then((response) => response.json())
     .then((forecastData) => {
@@ -54,6 +61,16 @@ function fiveDayForcastApi(weatherData) {
       }
     });
 }
+
+const newsApi = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${newsApiKey}`;
+
+fetch(newsApi)
+  .then((response) => response.json())
+  .then((newsData) => {
+    console.log(newsData);
+
+    displayNews(newsData.articles);
+  });
 
 function displayCurrentWeather(weatherData) {
   let spanCity = document.createElement("span");
@@ -107,4 +124,12 @@ function displayIcon(iconCode, altDesc, index) {
   forecastImg[index].src = imgUrl;
   //   console.log(altDesc);
   forecastImg[index].alt = altDesc;
+}
+
+function displayNews(articles) {
+  console.log(articles);
+
+  for (let i = 0; i < 4; i++) {
+    articleTitles[i].textContent = articles[i].title;
+  }
 }
