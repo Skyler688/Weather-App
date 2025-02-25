@@ -24,6 +24,18 @@ const articleTitles = [
   document.getElementById("article-link-2"),
   document.getElementById("article-link-3"),
 ];
+const articleImages = [
+  document.getElementById("article-img-main"),
+  document.getElementById("article-img-1"),
+  document.getElementById("article-img-2"),
+  document.getElementById("article-img-3"),
+];
+const articleDesc = [
+  document.getElementById("main-desc"),
+  document.getElementById("article-desc-1"),
+  document.getElementById("article-desc-2"),
+  document.getElementById("article-desc-3"),
+];
 
 const weatherApiKey = "856ff3b913c4ebc84e7e9012d881adf7";
 const newsApiKey = "c2a544f7e8ff40e2ae10e4f8b2859f23";
@@ -131,5 +143,26 @@ function displayNews(articles) {
 
   for (let i = 0; i < 4; i++) {
     articleTitles[i].textContent = articles[i].title;
+
+    const titleHref = articles[i].url;
+    if (titleHref != null) {
+      articleTitles[i].href = titleHref;
+    }
+
+    const imgUrl = articles[i].urlToImage;
+    if (imgUrl != null) {
+      articleImages[i].src = imgUrl;
+    } else {
+      articleImages[i].remove();
+    }
+
+    const desc = articles[i].description;
+    if (desc != null) {
+      articleDesc[i].textContent = desc;
+    } else {
+      articleDesc[i].textContent = "No description";
+      articleDesc[i].style.marginTop = "125px";
+      articleDesc[i].style.textDecoration = "underline";
+    }
   }
 }

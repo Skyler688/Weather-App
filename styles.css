@@ -198,6 +198,7 @@ nav li a {
   background-color: #f2cfa1;
   color: #000000;
   font-size: 20px;
+  text-decoration: none;
 }
 .article img {
   width: 65%;
@@ -239,6 +240,16 @@ footer a {
 /* Psuudo efects */
 header li a:hover {
   color: #e9e8d5;
+}
+.article h3 a:active {
+  text-decoration: none;
+}
+.article h3 a:visited {
+  text-decoration: none;
+}
+.article h3:hover {
+  position: relative;
+  top: -4px;
 }
 
 /* Reactive desine */
